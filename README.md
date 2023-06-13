@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Practice on creating a web application using the React library
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
