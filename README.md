@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 Practice on creating a web application using the React library.
+
 Adding class components. Functionality for adding and removing employees, awarding bonuses and promotions.
 
 ## Available Scripts
