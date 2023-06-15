@@ -1,8 +1,7 @@
 # Getting Started with Create React App
 
-Practice on creating a web application using the React library
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Practice on creating a web application using the React library.
+Adding class components. Functionality for adding and removing employees, awarding bonuses and promotions.
 
 ## Available Scripts
 
