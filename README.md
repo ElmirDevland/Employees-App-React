@@ -4,6 +4,8 @@ Practice on creating a web application using the React library.
 
 Adding class components. Functionality for adding and removing employees, awarding bonuses and promotions.
 
+Employee search functionality and filtering.
+
 ## Available Scripts
 
 In the project directory, you can run:
