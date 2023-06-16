@@ -1,14 +1,20 @@
 import './employees-list.css';
 import EmployeesListItem from '../employees-list-item/employees-list-item';
 
-const EmployeesList = ({ data, onDelete }) => {
-  const employees = data.map((obj) => (
-    <EmployeesListItem
-      key={obj.id}
-      {...obj}
-      onDelete={() => onDelete(obj.id)}
-    />
-  ));
+const EmployeesList = ({ data, onDelete, onToggleProp }) => {
+  const employees = data.map((obj) => {
+    const { id } = obj;
+    return (
+      <EmployeesListItem
+        key={id}
+        {...obj}
+        onDelete={() => onDelete(id)}
+        onToggleProp={(e) =>
+          onToggleProp(id, e.currentTarget.getAttribute('data-toggle'))
+        }
+      />
+    );
+  });
 
   return <ul className="app-list list-group">{employees}</ul>;
 };
