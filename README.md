@@ -6,6 +6,8 @@ Adding class components. Functionality for adding and removing employees, awardi
 
 Employee search functionality and filtering.
 
+Project completion.
+
 ## Available Scripts
 
 In the project directory, you can run:
