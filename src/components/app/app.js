@@ -40,9 +40,21 @@ class App extends Component {
     }
     return items.filter((item) => item.name.indexOf(term) > -1);
   };
-
   onUpdateSearch = (term) => {
     this.setState({ term });
+  };
+  onUpdateSalary = (id, value) => {
+    this.setState(({ data }) => {
+      return {
+        data: data.filter((obj) => {
+          if (id === obj.id) {
+            obj.salary = value;
+          }
+
+          return obj;
+        }),
+      };
+    });
   };
   filterEmp = (items, filter) => {
     if (filter === 'rise') {
@@ -88,6 +100,7 @@ class App extends Component {
       }),
     }));
   };
+
   render() {
     const { data, term, filter } = this.state;
     const numberOfEmployees = data.length;
@@ -107,6 +120,7 @@ class App extends Component {
         <EmployeesList
           onToggleProp={this.onToggleProp}
           onDelete={this.deleteItem}
+          onUpdateSalary={this.onUpdateSalary}
           data={filtredData}
         />
         <EmployeesAddForm onAdd={this.addItem} data={data} />

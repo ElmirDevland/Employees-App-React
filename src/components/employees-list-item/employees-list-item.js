@@ -1,8 +1,15 @@
 import './employees-list-item.css';
 
-const EmployeesListItem = (props) => {
-  const { increase, rise, name, salary, onDelete, onToggleProp } = props;
-
+const EmployeesListItem = ({
+  increase,
+  rise,
+  name,
+  salary,
+  onDelete,
+  onToggleProp,
+  onUpdateSalary,
+  id,
+}) => {
   return (
     <div>
       <li
@@ -18,7 +25,10 @@ const EmployeesListItem = (props) => {
           {name}
         </span>
         <input
-          disabled
+          onChange={(e) => {
+            const value = e.target.value.replace(/\D/gi, '');
+            onUpdateSalary(id, value);
+          }}
           className="list-group-item-input"
           defaultValue={salary + '$'}
         />
